@@ -125,10 +125,8 @@ relationship OneToOne {
 }
 
 // Set pagination options
-paginate JobHistory, Employee with infinite-scroll
-paginate Job with pagination
+paginate Norma, NormaIdioma, NormaSubtema, NormaTema, TemaCat, IdiomaCat, SubtemaCat, TipoNormaCat, PaisCat, EstatusCat, PalabraClaveCat, NormaPalabraClave, Archivo with pagination
 
 // Set service options to all except few
 service all with serviceImpl
 // Set an angular suffix
-angularSuffix * with mySuffix
