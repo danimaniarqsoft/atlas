@@ -1,0 +1,134 @@
+entity Norma {
+fechaFirma LocalDate,
+fechaRatifica LocalDate,
+fechaIniVigor LocalDate,
+fechaFinVigor LocalDate,
+firmantes TextBlob,
+fechaAlta LocalDate,
+fechaModificacion LocalDate,
+jhiUserId Long,
+activo Boolean
+//estatusCatId
+//pasCatId
+//tipoNormaId
+}
+
+entity NormaIdioma{
+titulo String,
+descripcion TextBlob,
+texto TextBlob,
+link String,
+fechaModificacion LocalDate
+//idiomaCatId
+//normaId
+}
+
+entity NormaSubtema{
+//It is a relationship
+subtemaCatId Long,
+idiomaCatId Long,
+normaIdiomaId Long,
+normaIdiomaIdiomaCatId Long,
+normaIdiomaNormaId Long
+}
+
+entity NormaTema{
+temaCatId Long,
+idiomaCatId Long,
+normaIdiomaId Long,
+normaIdiomaNormaId Long
+}
+
+entity TemaCat{
+nombre String,
+activo Boolean
+//idiomaCatId
+}
+
+entity IdiomaCat{
+idioma1 String,
+idioma2 String,
+idioma3 String,
+idioma4 String,
+idioma5 String,
+activo Boolean
+}
+
+entity SubtemaCat{
+nombre String,
+activo Boolean
+//idiomaCatId
+//temaCatId
+}
+
+entity TipoNormaCat{
+nombre String,
+activo Boolean
+//idiomaCatId
+}
+
+entity PaisCat{
+nombre String,
+activo Boolean
+//idiomaCatId
+}
+
+entity EstatusCat{
+nombre String,
+activo Boolean
+//idiomaCatId
+}
+
+entity PalabraClaveCat{
+nombre String,
+activo Boolean
+//idiomaCatId
+}
+
+entity NormaPalabraClave{
+palabraClaveId Long,
+idiomaCatId Long,
+normaIdiomaId Long,
+normaIdiomaNormaId Long
+}
+
+entity Archivo{
+nombre String,
+path String,
+fechaAlta LocalDate,
+fechaModificacion LocalDate,
+activo Boolean,
+jhiUserId Long,
+file AnyBlob
+//normaIdiomaCatId
+//idiomaCatId
+normaIdiomaNormaId Long
+}
+
+
+// defining multiple oneToOne relationships
+relationship OneToOne {
+	Norma{estatusCat} to EstatusCat,
+    Norma{paisCat} to PaisCat,
+    Norma{tipoNormaCat} to TipoNormaCat,
+    NormaIdioma{idiomaCat} to IdiomaCat,
+    NormaIdioma{norma} to Norma,
+    SubtemaCat{idioma} to IdiomaCat,
+    SubtemaCat{temaCat} to TemaCat,
+    TemaCat{idiomaCat} to IdiomaCat,
+    TipoNormaCat{idiomaCat} to IdiomaCat,
+    PaisCat{idiomaCat} to IdiomaCat,
+    EstatusCat{idiomaCat} to IdiomaCat,
+    PalabraClaveCat{idiomaCat} to IdiomaCat,
+    Archivo{idiomaCat} to IdiomaCat,
+    Archivo{norma} to Norma
+}
+
+// Set pagination options
+paginate JobHistory, Employee with infinite-scroll
+paginate Job with pagination
+
+// Set service options to all except few
+service all with serviceImpl
+// Set an angular suffix
+angularSuffix * with mySuffix
