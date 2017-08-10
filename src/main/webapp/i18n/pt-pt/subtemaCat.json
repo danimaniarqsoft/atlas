@@ -1,0 +1,25 @@
+{
+    "atlasApp": {
+        "subtemaCat" : {
+            "home": {
+                "title": "Subtema Cats",
+                "createLabel": "Criar um(a) novo(a) Subtema Cat",
+                "createOrEditLabel": "Criar ou editar um(a) Subtema Cat",
+                "search": "Search for Subtema Cat"
+            },
+            "created": "A new Subtema Cat is created with identifier {{ param }}",
+            "updated": "A Subtema Cat is updated with identifier {{ param }}",
+            "deleted": "A Subtema Cat is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Subtema Cat {{ id }}?"
+            },
+            "detail": {
+                "title": "Subtema Cat"
+            },
+            "nombre": "Nombre",
+            "activo": "Activo",
+            "idioma": "Idioma",
+            "temaCat": "Tema Cat"
+        }
+    }
+}

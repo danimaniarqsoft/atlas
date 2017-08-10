@@ -1,0 +1,50 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "idiomaCat",
+            "otherEntityName": "idiomaCat",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "normaIdioma"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "norma",
+            "otherEntityName": "norma",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "normaIdioma"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "titulo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "texto",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "link",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fechaModificacion",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20170809231125",
+    "entityTableName": "norma_idioma",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

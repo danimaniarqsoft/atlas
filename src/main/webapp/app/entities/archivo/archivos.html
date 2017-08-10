@@ -1,0 +1,102 @@
+<div>
+    <h2 data-translate="atlasApp.archivo.home.title">Archivos</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="archivo.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="atlasApp.archivo.home.createLabel">
+                        Create new Archivo
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'atlasApp.archivo.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nombre"><span data-translate="atlasApp.archivo.nombre">Nombre</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="path"><span data-translate="atlasApp.archivo.path">Path</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="fechaAlta"><span data-translate="atlasApp.archivo.fechaAlta">Fecha Alta</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="fechaModificacion"><span data-translate="atlasApp.archivo.fechaModificacion">Fecha Modificacion</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="activo"><span data-translate="atlasApp.archivo.activo">Activo</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="jhiUserId"><span data-translate="atlasApp.archivo.jhiUserId">Jhi User Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="file"><span data-translate="atlasApp.archivo.file">File</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="normaIdiomaNormaId"><span data-translate="atlasApp.archivo.normaIdiomaNormaId">Norma Idioma Norma Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="idiomaCat.id"><span data-translate="atlasApp.archivo.idiomaCat">Idioma Cat</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="norma.id"><span data-translate="atlasApp.archivo.norma">Norma</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="archivo in vm.archivos track by archivo.id">
+                    <td><a ui-sref="archivo-detail({id:archivo.id})">{{archivo.id}}</a></td>
+                    <td>{{archivo.nombre}}</td>
+                    <td>{{archivo.path}}</td>
+                        <td>{{archivo.fechaAlta | date:'mediumDate'}}</td>
+                        <td>{{archivo.fechaModificacion | date:'mediumDate'}}</td>
+                    <td>{{archivo.activo}}</td>
+                    <td>{{archivo.jhiUserId}}</td>
+                    <td>
+                        <a ng-if="archivo.file" ng-click="vm.openFile(archivo.fileContentType, archivo.file)" data-translate="entity.action.open">open</a>
+                        <span ng-if="archivo.file">{{archivo.fileContentType}}, {{vm.byteSize(archivo.file)}}</span>
+                    </td>
+                    <td>{{archivo.normaIdiomaNormaId}}</td>
+                    <td>
+                        <a ui-sref="idioma-cat-detail({id:archivo.idiomaCat.id})">{{archivo.idiomaCat.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="norma-detail({id:archivo.norma.id})">{{archivo.norma.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="archivo-detail({id:archivo.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="archivo.edit({id:archivo.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="archivo.delete({id:archivo.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

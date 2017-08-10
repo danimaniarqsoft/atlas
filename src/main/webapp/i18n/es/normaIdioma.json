@@ -1,0 +1,28 @@
+{
+    "atlasApp": {
+        "normaIdioma" : {
+            "home": {
+                "title": "Norma Idiomas",
+                "createLabel": "Crear nuevo Norma Idioma",
+                "createOrEditLabel": "Crear o editar Norma Idioma",
+                "search": "Search for Norma Idioma"
+            },
+            "created": "Un nuevo Norma Idioma ha sido creado con el identificador {{ param }}",
+            "updated": "Un Norma Idioma ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Norma Idioma ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Norma Idioma {{ id }}?"
+            },
+            "detail": {
+                "title": "Norma Idioma"
+            },
+            "titulo": "Titulo",
+            "descripcion": "Descripcion",
+            "texto": "Texto",
+            "link": "Link",
+            "fechaModificacion": "Fecha Modificacion",
+            "idiomaCat": "Idioma Cat",
+            "norma": "Norma"
+        }
+    }
+}

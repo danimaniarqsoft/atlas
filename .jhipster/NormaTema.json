@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "temaCatId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "idiomaCatId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "normaIdiomaId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "normaIdiomaNormaId",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20170809231127",
+    "entityTableName": "norma_tema",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

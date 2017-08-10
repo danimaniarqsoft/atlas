@@ -1,0 +1,24 @@
+{
+    "atlasApp": {
+        "temaCat" : {
+            "home": {
+                "title": "Tema Cats",
+                "createLabel": "Criar um(a) novo(a) Tema Cat",
+                "createOrEditLabel": "Criar ou editar um(a) Tema Cat",
+                "search": "Search for Tema Cat"
+            },
+            "created": "A new Tema Cat is created with identifier {{ param }}",
+            "updated": "A Tema Cat is updated with identifier {{ param }}",
+            "deleted": "A Tema Cat is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Tema Cat {{ id }}?"
+            },
+            "detail": {
+                "title": "Tema Cat"
+            },
+            "nombre": "Nombre",
+            "activo": "Activo",
+            "idiomaCat": "Idioma Cat"
+        }
+    }
+}

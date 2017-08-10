@@ -1,0 +1,24 @@
+{
+    "atlasApp": {
+        "estatusCat" : {
+            "home": {
+                "title": "Estatus Cats",
+                "createLabel": "Crear nuevo Estatus Cat",
+                "createOrEditLabel": "Crear o editar Estatus Cat",
+                "search": "Search for Estatus Cat"
+            },
+            "created": "Un nuevo Estatus Cat ha sido creado con el identificador {{ param }}",
+            "updated": "Un Estatus Cat ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Estatus Cat ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Estatus Cat {{ id }}?"
+            },
+            "detail": {
+                "title": "Estatus Cat"
+            },
+            "nombre": "Nombre",
+            "activo": "Activo",
+            "idiomaCat": "Idioma Cat"
+        }
+    }
+}

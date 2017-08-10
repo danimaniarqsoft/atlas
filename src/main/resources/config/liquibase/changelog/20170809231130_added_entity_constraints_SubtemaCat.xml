@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity SubtemaCat.
+    -->
+    <changeSet id="20170809231130-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="idioma_id"
+                                 baseTableName="subtema_cat"
+                                 constraintName="fk_subtema_cat_idioma_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="idioma_cat"/>
+
+        <addForeignKeyConstraint baseColumnNames="tema_cat_id"
+                                 baseTableName="subtema_cat"
+                                 constraintName="fk_subtema_cat_tema_cat_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tema_cat"/>
+
+    </changeSet>
+</databaseChangeLog>

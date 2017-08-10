@@ -1,0 +1,24 @@
+{
+    "atlasApp": {
+        "paisCat" : {
+            "home": {
+                "title": "Pais Cats",
+                "createLabel": "Criar um(a) novo(a) Pais Cat",
+                "createOrEditLabel": "Criar ou editar um(a) Pais Cat",
+                "search": "Search for Pais Cat"
+            },
+            "created": "A new Pais Cat is created with identifier {{ param }}",
+            "updated": "A Pais Cat is updated with identifier {{ param }}",
+            "deleted": "A Pais Cat is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Pais Cat {{ id }}?"
+            },
+            "detail": {
+                "title": "Pais Cat"
+            },
+            "nombre": "Nombre",
+            "activo": "Activo",
+            "idiomaCat": "Idioma Cat"
+        }
+    }
+}

@@ -7,6 +7,19 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entidades",
+                "norma": "Norma",
+                "normaIdioma": "Norma Idioma",
+                "normaSubtema": "Norma Subtema",
+                "normaTema": "Norma Tema",
+                "temaCat": "Tema Cat",
+                "idiomaCat": "Idioma Cat",
+                "subtemaCat": "Subtema Cat",
+                "tipoNormaCat": "Tipo Norma Cat",
+                "paisCat": "Pais Cat",
+                "estatusCat": "Estatus Cat",
+                "palabraClaveCat": "Palabra Clave Cat",
+                "normaPalabraClave": "Norma Palabra Clave",
+                "archivo": "Archivo",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

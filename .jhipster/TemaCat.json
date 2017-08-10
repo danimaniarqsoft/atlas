@@ -1,0 +1,28 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "idiomaCat",
+            "otherEntityName": "idiomaCat",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "temaCat"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "activo",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20170809231128",
+    "entityTableName": "tema_cat",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

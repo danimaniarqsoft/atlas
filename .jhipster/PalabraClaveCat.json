@@ -1,0 +1,28 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "idiomaCat",
+            "otherEntityName": "idiomaCat",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "palabraClaveCat"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "activo",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20170809231134",
+    "entityTableName": "palabra_clave_cat",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

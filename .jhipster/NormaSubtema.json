@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "subtemaCatId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "idiomaCatId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "normaIdiomaId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "normaIdiomaIdiomaCatId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "normaIdiomaNormaId",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20170809231126",
+    "entityTableName": "norma_subtema",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

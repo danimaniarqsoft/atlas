@@ -1,0 +1,35 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "idioma1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "idioma2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "idioma3",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "idioma4",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "idioma5",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "activo",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20170809231129",
+    "entityTableName": "idioma_cat",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

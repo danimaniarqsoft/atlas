@@ -1,0 +1,67 @@
+
+<div>
+    <h2><span data-translate="atlasApp.norma.detail.title">Norma</span> {{vm.norma.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="atlasApp.norma.fechaFirma">Fecha Firma</span></dt>
+        <dd>
+            <span>{{vm.norma.fechaFirma | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.norma.fechaRatifica">Fecha Ratifica</span></dt>
+        <dd>
+            <span>{{vm.norma.fechaRatifica | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.norma.fechaIniVigor">Fecha Ini Vigor</span></dt>
+        <dd>
+            <span>{{vm.norma.fechaIniVigor | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.norma.fechaFinVigor">Fecha Fin Vigor</span></dt>
+        <dd>
+            <span>{{vm.norma.fechaFinVigor | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.norma.firmantes">Firmantes</span></dt>
+        <dd>
+            <span>{{vm.norma.firmantes}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.norma.fechaAlta">Fecha Alta</span></dt>
+        <dd>
+            <span>{{vm.norma.fechaAlta | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.norma.fechaModificacion">Fecha Modificacion</span></dt>
+        <dd>
+            <span>{{vm.norma.fechaModificacion | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.norma.jhiUserId">Jhi User Id</span></dt>
+        <dd>
+            <span>{{vm.norma.jhiUserId}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.norma.activo">Activo</span></dt>
+        <dd>
+            <span>{{vm.norma.activo}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.norma.estatusCat">Estatus Cat</span></dt>
+        <dd>
+            <a ui-sref="estatus-cat-detail({id:vm.norma.estatusCat.id})">{{vm.norma.estatusCat.id}}</a>
+        </dd>
+        <dt><span data-translate="atlasApp.norma.paisCat">Pais Cat</span></dt>
+        <dd>
+            <a ui-sref="pais-cat-detail({id:vm.norma.paisCat.id})">{{vm.norma.paisCat.id}}</a>
+        </dd>
+        <dt><span data-translate="atlasApp.norma.tipoNormaCat">Tipo Norma Cat</span></dt>
+        <dd>
+            <a ui-sref="tipo-norma-cat-detail({id:vm.norma.tipoNormaCat.id})">{{vm.norma.tipoNormaCat.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="norma-detail.edit({id:vm.norma.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

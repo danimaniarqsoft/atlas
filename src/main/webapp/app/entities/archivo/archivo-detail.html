@@ -1,0 +1,62 @@
+
+<div>
+    <h2><span data-translate="atlasApp.archivo.detail.title">Archivo</span> {{vm.archivo.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="atlasApp.archivo.nombre">Nombre</span></dt>
+        <dd>
+            <span>{{vm.archivo.nombre}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.archivo.path">Path</span></dt>
+        <dd>
+            <span>{{vm.archivo.path}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.archivo.fechaAlta">Fecha Alta</span></dt>
+        <dd>
+            <span>{{vm.archivo.fechaAlta | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.archivo.fechaModificacion">Fecha Modificacion</span></dt>
+        <dd>
+            <span>{{vm.archivo.fechaModificacion | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.archivo.activo">Activo</span></dt>
+        <dd>
+            <span>{{vm.archivo.activo}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.archivo.jhiUserId">Jhi User Id</span></dt>
+        <dd>
+            <span>{{vm.archivo.jhiUserId}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.archivo.file">File</span></dt>
+        <dd>
+            <div ng-if="vm.archivo.file">
+                <a ng-click="vm.openFile(vm.archivo.fileContentType, vm.archivo.file)" data-translate="entity.action.open">open</a>
+                {{vm.archivo.fileContentType}}, {{vm.byteSize(vm.archivo.file)}}
+            </div>
+        </dd>
+        <dt><span data-translate="atlasApp.archivo.normaIdiomaNormaId">Norma Idioma Norma Id</span></dt>
+        <dd>
+            <span>{{vm.archivo.normaIdiomaNormaId}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.archivo.idiomaCat">Idioma Cat</span></dt>
+        <dd>
+            <a ui-sref="idioma-cat-detail({id:vm.archivo.idiomaCat.id})">{{vm.archivo.idiomaCat.id}}</a>
+        </dd>
+        <dt><span data-translate="atlasApp.archivo.norma">Norma</span></dt>
+        <dd>
+            <a ui-sref="norma-detail({id:vm.archivo.norma.id})">{{vm.archivo.norma.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="archivo-detail.edit({id:vm.archivo.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

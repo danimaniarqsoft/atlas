@@ -1,0 +1,61 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "idiomaCat",
+            "otherEntityName": "idiomaCat",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "archivo"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "norma",
+            "otherEntityName": "norma",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "archivo"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "path",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fechaAlta",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "fechaModificacion",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "activo",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "jhiUserId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "file",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "normaIdiomaNormaId",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20170809231136",
+    "entityTableName": "archivo",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

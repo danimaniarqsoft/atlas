@@ -1,0 +1,87 @@
+<div>
+    <h2 data-translate="atlasApp.subtemaCat.home.title">Subtema Cats</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="subtema-cat.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="atlasApp.subtemaCat.home.createLabel">
+                        Create new Subtema Cat
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'atlasApp.subtemaCat.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nombre"><span data-translate="atlasApp.subtemaCat.nombre">Nombre</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="activo"><span data-translate="atlasApp.subtemaCat.activo">Activo</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="idioma.id"><span data-translate="atlasApp.subtemaCat.idioma">Idioma</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="temaCat.id"><span data-translate="atlasApp.subtemaCat.temaCat">Tema Cat</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="subtemaCat in vm.subtemaCats track by subtemaCat.id">
+                    <td><a ui-sref="subtema-cat-detail({id:subtemaCat.id})">{{subtemaCat.id}}</a></td>
+                    <td>{{subtemaCat.nombre}}</td>
+                    <td>{{subtemaCat.activo}}</td>
+                    <td>
+                        <a ui-sref="idioma-cat-detail({id:subtemaCat.idioma.id})">{{subtemaCat.idioma.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="tema-cat-detail({id:subtemaCat.temaCat.id})">{{subtemaCat.temaCat.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="subtema-cat-detail({id:subtemaCat.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="subtema-cat.edit({id:subtemaCat.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="subtema-cat.delete({id:subtemaCat.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+{
+    "atlasApp": {
+        "palabraClaveCat" : {
+            "home": {
+                "title": "Palabra Clave Cats",
+                "createLabel": "Crear nuevo Palabra Clave Cat",
+                "createOrEditLabel": "Crear o editar Palabra Clave Cat",
+                "search": "Search for Palabra Clave Cat"
+            },
+            "created": "Un nuevo Palabra Clave Cat ha sido creado con el identificador {{ param }}",
+            "updated": "Un Palabra Clave Cat ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Palabra Clave Cat ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Palabra Clave Cat {{ id }}?"
+            },
+            "detail": {
+                "title": "Palabra Clave Cat"
+            },
+            "nombre": "Nombre",
+            "activo": "Activo",
+            "idiomaCat": "Idioma Cat"
+        }
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "estatusCat",
+            "otherEntityName": "estatusCat",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "norma"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "paisCat",
+            "otherEntityName": "paisCat",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "norma"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "tipoNormaCat",
+            "otherEntityName": "tipoNormaCat",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "norma"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "fechaFirma",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "fechaRatifica",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "fechaIniVigor",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "fechaFinVigor",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "firmantes",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "fechaAlta",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "fechaModificacion",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "jhiUserId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "activo",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20170809231124",
+    "entityTableName": "norma",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

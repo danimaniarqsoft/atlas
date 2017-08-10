@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="atlasApp.palabraClaveCat.detail.title">Palabra Clave Cat</span> {{vm.palabraClaveCat.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="atlasApp.palabraClaveCat.nombre">Nombre</span></dt>
+        <dd>
+            <span>{{vm.palabraClaveCat.nombre}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.palabraClaveCat.activo">Activo</span></dt>
+        <dd>
+            <span>{{vm.palabraClaveCat.activo}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.palabraClaveCat.idiomaCat">Idioma Cat</span></dt>
+        <dd>
+            <a ui-sref="idioma-cat-detail({id:vm.palabraClaveCat.idiomaCat.id})">{{vm.palabraClaveCat.idiomaCat.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="palabra-clave-cat-detail.edit({id:vm.palabraClaveCat.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

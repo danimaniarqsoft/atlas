@@ -40,6 +40,19 @@ public class CacheConfiguration {
             cm.createCache(mx.gob.profeco.atlas.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(mx.gob.profeco.atlas.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(mx.gob.profeco.atlas.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(mx.gob.profeco.atlas.domain.Norma.class.getName(), jcacheConfiguration);
+            cm.createCache(mx.gob.profeco.atlas.domain.NormaIdioma.class.getName(), jcacheConfiguration);
+            cm.createCache(mx.gob.profeco.atlas.domain.NormaSubtema.class.getName(), jcacheConfiguration);
+            cm.createCache(mx.gob.profeco.atlas.domain.NormaTema.class.getName(), jcacheConfiguration);
+            cm.createCache(mx.gob.profeco.atlas.domain.TemaCat.class.getName(), jcacheConfiguration);
+            cm.createCache(mx.gob.profeco.atlas.domain.IdiomaCat.class.getName(), jcacheConfiguration);
+            cm.createCache(mx.gob.profeco.atlas.domain.SubtemaCat.class.getName(), jcacheConfiguration);
+            cm.createCache(mx.gob.profeco.atlas.domain.TipoNormaCat.class.getName(), jcacheConfiguration);
+            cm.createCache(mx.gob.profeco.atlas.domain.PaisCat.class.getName(), jcacheConfiguration);
+            cm.createCache(mx.gob.profeco.atlas.domain.EstatusCat.class.getName(), jcacheConfiguration);
+            cm.createCache(mx.gob.profeco.atlas.domain.PalabraClaveCat.class.getName(), jcacheConfiguration);
+            cm.createCache(mx.gob.profeco.atlas.domain.NormaPalabraClave.class.getName(), jcacheConfiguration);
+            cm.createCache(mx.gob.profeco.atlas.domain.Archivo.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

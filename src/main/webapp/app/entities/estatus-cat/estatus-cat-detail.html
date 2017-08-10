@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="atlasApp.estatusCat.detail.title">Estatus Cat</span> {{vm.estatusCat.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="atlasApp.estatusCat.nombre">Nombre</span></dt>
+        <dd>
+            <span>{{vm.estatusCat.nombre}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.estatusCat.activo">Activo</span></dt>
+        <dd>
+            <span>{{vm.estatusCat.activo}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.estatusCat.idiomaCat">Idioma Cat</span></dt>
+        <dd>
+            <a ui-sref="idioma-cat-detail({id:vm.estatusCat.idiomaCat.id})">{{vm.estatusCat.idiomaCat.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="estatus-cat-detail.edit({id:vm.estatusCat.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

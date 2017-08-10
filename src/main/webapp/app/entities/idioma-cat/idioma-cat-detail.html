@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span data-translate="atlasApp.idiomaCat.detail.title">Idioma Cat</span> {{vm.idiomaCat.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="atlasApp.idiomaCat.idioma1">Idioma 1</span></dt>
+        <dd>
+            <span>{{vm.idiomaCat.idioma1}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.idiomaCat.idioma2">Idioma 2</span></dt>
+        <dd>
+            <span>{{vm.idiomaCat.idioma2}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.idiomaCat.idioma3">Idioma 3</span></dt>
+        <dd>
+            <span>{{vm.idiomaCat.idioma3}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.idiomaCat.idioma4">Idioma 4</span></dt>
+        <dd>
+            <span>{{vm.idiomaCat.idioma4}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.idiomaCat.idioma5">Idioma 5</span></dt>
+        <dd>
+            <span>{{vm.idiomaCat.idioma5}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.idiomaCat.activo">Activo</span></dt>
+        <dd>
+            <span>{{vm.idiomaCat.activo}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="idioma-cat-detail.edit({id:vm.idiomaCat.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

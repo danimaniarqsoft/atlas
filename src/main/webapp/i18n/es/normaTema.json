@@ -1,0 +1,25 @@
+{
+    "atlasApp": {
+        "normaTema" : {
+            "home": {
+                "title": "Norma Temas",
+                "createLabel": "Crear nuevo Norma Tema",
+                "createOrEditLabel": "Crear o editar Norma Tema",
+                "search": "Search for Norma Tema"
+            },
+            "created": "Un nuevo Norma Tema ha sido creado con el identificador {{ param }}",
+            "updated": "Un Norma Tema ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Norma Tema ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Norma Tema {{ id }}?"
+            },
+            "detail": {
+                "title": "Norma Tema"
+            },
+            "temaCatId": "Tema Cat Id",
+            "idiomaCatId": "Idioma Cat Id",
+            "normaIdiomaId": "Norma Idioma Id",
+            "normaIdiomaNormaId": "Norma Idioma Norma Id"
+        }
+    }
+}

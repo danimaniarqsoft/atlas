@@ -1,0 +1,61 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myIdiomaCatLabel" data-translate="atlasApp.idiomaCat.home.createOrEditLabel">Create or edit a Idioma Cat</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.idiomaCat.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.idiomaCat.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atlasApp.idiomaCat.idioma1" for="field_idioma1">Idioma 1</label>
+            <input type="text" class="form-control" name="idioma1" id="field_idioma1"
+                    ng-model="vm.idiomaCat.idioma1"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atlasApp.idiomaCat.idioma2" for="field_idioma2">Idioma 2</label>
+            <input type="text" class="form-control" name="idioma2" id="field_idioma2"
+                    ng-model="vm.idiomaCat.idioma2"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atlasApp.idiomaCat.idioma3" for="field_idioma3">Idioma 3</label>
+            <input type="text" class="form-control" name="idioma3" id="field_idioma3"
+                    ng-model="vm.idiomaCat.idioma3"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atlasApp.idiomaCat.idioma4" for="field_idioma4">Idioma 4</label>
+            <input type="text" class="form-control" name="idioma4" id="field_idioma4"
+                    ng-model="vm.idiomaCat.idioma4"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atlasApp.idiomaCat.idioma5" for="field_idioma5">Idioma 5</label>
+            <input type="text" class="form-control" name="idioma5" id="field_idioma5"
+                    ng-model="vm.idiomaCat.idioma5"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atlasApp.idiomaCat.activo" for="field_activo">Activo</label>
+                <input type="checkbox" name="activo" id="field_activo"
+                          ng-model="vm.idiomaCat.activo"/>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

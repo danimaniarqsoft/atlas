@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="atlasApp.normaPalabraClave.detail.title">Norma Palabra Clave</span> {{vm.normaPalabraClave.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="atlasApp.normaPalabraClave.palabraClaveId">Palabra Clave Id</span></dt>
+        <dd>
+            <span>{{vm.normaPalabraClave.palabraClaveId}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.normaPalabraClave.idiomaCatId">Idioma Cat Id</span></dt>
+        <dd>
+            <span>{{vm.normaPalabraClave.idiomaCatId}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.normaPalabraClave.normaIdiomaId">Norma Idioma Id</span></dt>
+        <dd>
+            <span>{{vm.normaPalabraClave.normaIdiomaId}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.normaPalabraClave.normaIdiomaNormaId">Norma Idioma Norma Id</span></dt>
+        <dd>
+            <span>{{vm.normaPalabraClave.normaIdiomaNormaId}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="norma-palabra-clave-detail.edit({id:vm.normaPalabraClave.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

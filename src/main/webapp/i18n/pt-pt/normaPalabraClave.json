@@ -1,0 +1,25 @@
+{
+    "atlasApp": {
+        "normaPalabraClave" : {
+            "home": {
+                "title": "Norma Palabra Claves",
+                "createLabel": "Criar um(a) novo(a) Norma Palabra Clave",
+                "createOrEditLabel": "Criar ou editar um(a) Norma Palabra Clave",
+                "search": "Search for Norma Palabra Clave"
+            },
+            "created": "A new Norma Palabra Clave is created with identifier {{ param }}",
+            "updated": "A Norma Palabra Clave is updated with identifier {{ param }}",
+            "deleted": "A Norma Palabra Clave is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Norma Palabra Clave {{ id }}?"
+            },
+            "detail": {
+                "title": "Norma Palabra Clave"
+            },
+            "palabraClaveId": "Palabra Clave Id",
+            "idiomaCatId": "Idioma Cat Id",
+            "normaIdiomaId": "Norma Idioma Id",
+            "normaIdiomaNormaId": "Norma Idioma Norma Id"
+        }
+    }
+}

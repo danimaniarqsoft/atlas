@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="atlasApp.paisCat.detail.title">Pais Cat</span> {{vm.paisCat.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="atlasApp.paisCat.nombre">Nombre</span></dt>
+        <dd>
+            <span>{{vm.paisCat.nombre}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.paisCat.activo">Activo</span></dt>
+        <dd>
+            <span>{{vm.paisCat.activo}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.paisCat.idiomaCat">Idioma Cat</span></dt>
+        <dd>
+            <a ui-sref="idioma-cat-detail({id:vm.paisCat.idiomaCat.id})">{{vm.paisCat.idiomaCat.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="pais-cat-detail.edit({id:vm.paisCat.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

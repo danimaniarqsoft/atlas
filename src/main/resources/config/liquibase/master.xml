@@ -5,6 +5,28 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
     <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170809231124_added_entity_Norma.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170809231125_added_entity_NormaIdioma.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170809231126_added_entity_NormaSubtema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170809231127_added_entity_NormaTema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170809231128_added_entity_TemaCat.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170809231129_added_entity_IdiomaCat.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170809231130_added_entity_SubtemaCat.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170809231131_added_entity_TipoNormaCat.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170809231132_added_entity_PaisCat.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170809231133_added_entity_EstatusCat.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170809231134_added_entity_PalabraClaveCat.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170809231135_added_entity_NormaPalabraClave.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170809231136_added_entity_Archivo.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="classpath:config/liquibase/changelog/20170809231124_added_entity_constraints_Norma.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170809231125_added_entity_constraints_NormaIdioma.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170809231128_added_entity_constraints_TemaCat.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170809231130_added_entity_constraints_SubtemaCat.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170809231131_added_entity_constraints_TipoNormaCat.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170809231132_added_entity_constraints_PaisCat.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170809231133_added_entity_constraints_EstatusCat.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170809231134_added_entity_constraints_PalabraClaveCat.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170809231136_added_entity_constraints_Archivo.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

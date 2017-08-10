@@ -1,0 +1,26 @@
+{
+    "atlasApp": {
+        "normaSubtema" : {
+            "home": {
+                "title": "Norma Subtemas",
+                "createLabel": "Criar um(a) novo(a) Norma Subtema",
+                "createOrEditLabel": "Criar ou editar um(a) Norma Subtema",
+                "search": "Search for Norma Subtema"
+            },
+            "created": "A new Norma Subtema is created with identifier {{ param }}",
+            "updated": "A Norma Subtema is updated with identifier {{ param }}",
+            "deleted": "A Norma Subtema is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Norma Subtema {{ id }}?"
+            },
+            "detail": {
+                "title": "Norma Subtema"
+            },
+            "subtemaCatId": "Subtema Cat Id",
+            "idiomaCatId": "Idioma Cat Id",
+            "normaIdiomaId": "Norma Idioma Id",
+            "normaIdiomaIdiomaCatId": "Norma Idioma Idioma Cat Id",
+            "normaIdiomaNormaId": "Norma Idioma Norma Id"
+        }
+    }
+}

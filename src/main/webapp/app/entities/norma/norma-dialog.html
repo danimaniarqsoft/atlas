@@ -1,0 +1,120 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myNormaLabel" data-translate="atlasApp.norma.home.createOrEditLabel">Create or edit a Norma</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.norma.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.norma.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atlasApp.norma.fechaFirma" for="field_fechaFirma">Fecha Firma</label>
+                <div class="input-group">
+                    <input id="field_fechaFirma" type="text" class="form-control" name="fechaFirma" uib-datepicker-popup="{{dateformat}}" ng-model="vm.norma.fechaFirma" is-open="vm.datePickerOpenStatus.fechaFirma"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('fechaFirma')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atlasApp.norma.fechaRatifica" for="field_fechaRatifica">Fecha Ratifica</label>
+                <div class="input-group">
+                    <input id="field_fechaRatifica" type="text" class="form-control" name="fechaRatifica" uib-datepicker-popup="{{dateformat}}" ng-model="vm.norma.fechaRatifica" is-open="vm.datePickerOpenStatus.fechaRatifica"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('fechaRatifica')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atlasApp.norma.fechaIniVigor" for="field_fechaIniVigor">Fecha Ini Vigor</label>
+                <div class="input-group">
+                    <input id="field_fechaIniVigor" type="text" class="form-control" name="fechaIniVigor" uib-datepicker-popup="{{dateformat}}" ng-model="vm.norma.fechaIniVigor" is-open="vm.datePickerOpenStatus.fechaIniVigor"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('fechaIniVigor')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atlasApp.norma.fechaFinVigor" for="field_fechaFinVigor">Fecha Fin Vigor</label>
+                <div class="input-group">
+                    <input id="field_fechaFinVigor" type="text" class="form-control" name="fechaFinVigor" uib-datepicker-popup="{{dateformat}}" ng-model="vm.norma.fechaFinVigor" is-open="vm.datePickerOpenStatus.fechaFinVigor"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('fechaFinVigor')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atlasApp.norma.firmantes" for="field_firmantes">Firmantes</label>
+                <textarea class="form-control" name="firmantes" id="field_firmantes"
+                    ng-model="vm.norma.firmantes" ></textarea>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atlasApp.norma.fechaAlta" for="field_fechaAlta">Fecha Alta</label>
+                <div class="input-group">
+                    <input id="field_fechaAlta" type="text" class="form-control" name="fechaAlta" uib-datepicker-popup="{{dateformat}}" ng-model="vm.norma.fechaAlta" is-open="vm.datePickerOpenStatus.fechaAlta"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('fechaAlta')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atlasApp.norma.fechaModificacion" for="field_fechaModificacion">Fecha Modificacion</label>
+                <div class="input-group">
+                    <input id="field_fechaModificacion" type="text" class="form-control" name="fechaModificacion" uib-datepicker-popup="{{dateformat}}" ng-model="vm.norma.fechaModificacion" is-open="vm.datePickerOpenStatus.fechaModificacion"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('fechaModificacion')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atlasApp.norma.jhiUserId" for="field_jhiUserId">Jhi User Id</label>
+            <input type="number" class="form-control" name="jhiUserId" id="field_jhiUserId"
+                    ng-model="vm.norma.jhiUserId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="atlasApp.norma.activo" for="field_activo">Activo</label>
+                <input type="checkbox" name="activo" id="field_activo"
+                          ng-model="vm.norma.activo"/>
+        </div>
+
+        <div class="form-group">
+            <label data-translate="atlasApp.norma.estatusCat" for="field_estatusCat">Estatus Cat</label>
+            <select class="form-control" id="field_estatusCat" name="estatusCat" ng-model="vm.norma.estatusCat" ng-options="estatusCat as estatusCat.id for estatusCat in vm.estatuscats | orderBy:'id' track by estatusCat.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="atlasApp.norma.paisCat" for="field_paisCat">Pais Cat</label>
+            <select class="form-control" id="field_paisCat" name="paisCat" ng-model="vm.norma.paisCat" ng-options="paisCat as paisCat.id for paisCat in vm.paiscats | orderBy:'id' track by paisCat.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="atlasApp.norma.tipoNormaCat" for="field_tipoNormaCat">Tipo Norma Cat</label>
+            <select class="form-control" id="field_tipoNormaCat" name="tipoNormaCat" ng-model="vm.norma.tipoNormaCat" ng-options="tipoNormaCat as tipoNormaCat.id for tipoNormaCat in vm.tiponormacats | orderBy:'id' track by tipoNormaCat.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,93 @@
+<div>
+    <h2 data-translate="atlasApp.normaIdioma.home.title">Norma Idiomas</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="norma-idioma.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs-down"  data-translate="atlasApp.normaIdioma.home.createLabel">
+                        Create new Norma Idioma
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'atlasApp.normaIdioma.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="titulo"><span data-translate="atlasApp.normaIdioma.titulo">Titulo</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="descripcion"><span data-translate="atlasApp.normaIdioma.descripcion">Descripcion</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="texto"><span data-translate="atlasApp.normaIdioma.texto">Texto</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="link"><span data-translate="atlasApp.normaIdioma.link">Link</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="fechaModificacion"><span data-translate="atlasApp.normaIdioma.fechaModificacion">Fecha Modificacion</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="idiomaCat.id"><span data-translate="atlasApp.normaIdioma.idiomaCat">Idioma Cat</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="norma.id"><span data-translate="atlasApp.normaIdioma.norma">Norma</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="normaIdioma in vm.normaIdiomas track by normaIdioma.id">
+                    <td><a ui-sref="norma-idioma-detail({id:normaIdioma.id})">{{normaIdioma.id}}</a></td>
+                    <td>{{normaIdioma.titulo}}</td>
+                    <td>{{normaIdioma.descripcion}}</td>
+                    <td>{{normaIdioma.texto}}</td>
+                    <td>{{normaIdioma.link}}</td>
+                        <td>{{normaIdioma.fechaModificacion | date:'mediumDate'}}</td>
+                    <td>
+                        <a ui-sref="idioma-cat-detail({id:normaIdioma.idiomaCat.id})">{{normaIdioma.idiomaCat.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="norma-detail({id:normaIdioma.norma.id})">{{normaIdioma.norma.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="norma-idioma-detail({id:normaIdioma.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="norma-idioma.edit({id:normaIdioma.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="norma-idioma.delete({id:normaIdioma.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

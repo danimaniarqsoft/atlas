@@ -1,0 +1,36 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "idioma",
+            "otherEntityName": "idiomaCat",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "subtemaCat"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "temaCat",
+            "otherEntityName": "temaCat",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "subtemaCat"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "activo",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20170809231130",
+    "entityTableName": "subtema_cat",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

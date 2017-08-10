@@ -1,0 +1,33 @@
+{
+    "atlasApp": {
+        "norma" : {
+            "home": {
+                "title": "Normas",
+                "createLabel": "Crear nuevo Norma",
+                "createOrEditLabel": "Crear o editar Norma",
+                "search": "Search for Norma"
+            },
+            "created": "Un nuevo Norma ha sido creado con el identificador {{ param }}",
+            "updated": "Un Norma ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Norma ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Norma {{ id }}?"
+            },
+            "detail": {
+                "title": "Norma"
+            },
+            "fechaFirma": "Fecha Firma",
+            "fechaRatifica": "Fecha Ratifica",
+            "fechaIniVigor": "Fecha Ini Vigor",
+            "fechaFinVigor": "Fecha Fin Vigor",
+            "firmantes": "Firmantes",
+            "fechaAlta": "Fecha Alta",
+            "fechaModificacion": "Fecha Modificacion",
+            "jhiUserId": "Jhi User Id",
+            "activo": "Activo",
+            "estatusCat": "Estatus Cat",
+            "paisCat": "Pais Cat",
+            "tipoNormaCat": "Tipo Norma Cat"
+        }
+    }
+}

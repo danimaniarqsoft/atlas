@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Norma.
+    -->
+    <changeSet id="20170809231124-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="estatus_cat_id"
+                                 baseTableName="norma"
+                                 constraintName="fk_norma_estatus_cat_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="estatus_cat"/>
+
+        <addForeignKeyConstraint baseColumnNames="pais_cat_id"
+                                 baseTableName="norma"
+                                 constraintName="fk_norma_pais_cat_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="pais_cat"/>
+
+        <addForeignKeyConstraint baseColumnNames="tipo_norma_cat_id"
+                                 baseTableName="norma"
+                                 constraintName="fk_norma_tipo_norma_cat_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tipo_norma_cat"/>
+
+    </changeSet>
+</databaseChangeLog>

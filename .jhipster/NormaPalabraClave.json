@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "palabraClaveId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "idiomaCatId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "normaIdiomaId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "normaIdiomaNormaId",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20170809231135",
+    "entityTableName": "norma_palabra_clave",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

@@ -1,0 +1,31 @@
+{
+    "atlasApp": {
+        "archivo" : {
+            "home": {
+                "title": "Archivos",
+                "createLabel": "Crear nuevo Archivo",
+                "createOrEditLabel": "Crear o editar Archivo",
+                "search": "Search for Archivo"
+            },
+            "created": "Un nuevo Archivo ha sido creado con el identificador {{ param }}",
+            "updated": "Un Archivo ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Archivo ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Archivo {{ id }}?"
+            },
+            "detail": {
+                "title": "Archivo"
+            },
+            "nombre": "Nombre",
+            "path": "Path",
+            "fechaAlta": "Fecha Alta",
+            "fechaModificacion": "Fecha Modificacion",
+            "activo": "Activo",
+            "jhiUserId": "Jhi User Id",
+            "file": "File",
+            "normaIdiomaNormaId": "Norma Idioma Norma Id",
+            "idiomaCat": "Idioma Cat",
+            "norma": "Norma"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "atlasApp": {
+        "tipoNormaCat" : {
+            "home": {
+                "title": "Tipo Norma Cats",
+                "createLabel": "Criar um(a) novo(a) Tipo Norma Cat",
+                "createOrEditLabel": "Criar ou editar um(a) Tipo Norma Cat",
+                "search": "Search for Tipo Norma Cat"
+            },
+            "created": "A new Tipo Norma Cat is created with identifier {{ param }}",
+            "updated": "A Tipo Norma Cat is updated with identifier {{ param }}",
+            "deleted": "A Tipo Norma Cat is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Tipo Norma Cat {{ id }}?"
+            },
+            "detail": {
+                "title": "Tipo Norma Cat"
+            },
+            "nombre": "Nombre",
+            "activo": "Activo",
+            "idiomaCat": "Idioma Cat"
+        }
+    }
+}

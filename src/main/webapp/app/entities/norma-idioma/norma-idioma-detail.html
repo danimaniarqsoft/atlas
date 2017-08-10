@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span data-translate="atlasApp.normaIdioma.detail.title">Norma Idioma</span> {{vm.normaIdioma.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="atlasApp.normaIdioma.titulo">Titulo</span></dt>
+        <dd>
+            <span>{{vm.normaIdioma.titulo}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.normaIdioma.descripcion">Descripcion</span></dt>
+        <dd>
+            <span>{{vm.normaIdioma.descripcion}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.normaIdioma.texto">Texto</span></dt>
+        <dd>
+            <span>{{vm.normaIdioma.texto}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.normaIdioma.link">Link</span></dt>
+        <dd>
+            <span>{{vm.normaIdioma.link}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.normaIdioma.fechaModificacion">Fecha Modificacion</span></dt>
+        <dd>
+            <span>{{vm.normaIdioma.fechaModificacion | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="atlasApp.normaIdioma.idiomaCat">Idioma Cat</span></dt>
+        <dd>
+            <a ui-sref="idioma-cat-detail({id:vm.normaIdioma.idiomaCat.id})">{{vm.normaIdioma.idiomaCat.id}}</a>
+        </dd>
+        <dt><span data-translate="atlasApp.normaIdioma.norma">Norma</span></dt>
+        <dd>
+            <a ui-sref="norma-detail({id:vm.normaIdioma.norma.id})">{{vm.normaIdioma.norma.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="norma-idioma-detail.edit({id:vm.normaIdioma.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

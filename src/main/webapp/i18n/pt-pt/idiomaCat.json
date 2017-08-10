@@ -1,0 +1,27 @@
+{
+    "atlasApp": {
+        "idiomaCat" : {
+            "home": {
+                "title": "Idioma Cats",
+                "createLabel": "Criar um(a) novo(a) Idioma Cat",
+                "createOrEditLabel": "Criar ou editar um(a) Idioma Cat",
+                "search": "Search for Idioma Cat"
+            },
+            "created": "A new Idioma Cat is created with identifier {{ param }}",
+            "updated": "A Idioma Cat is updated with identifier {{ param }}",
+            "deleted": "A Idioma Cat is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Idioma Cat {{ id }}?"
+            },
+            "detail": {
+                "title": "Idioma Cat"
+            },
+            "idioma1": "Idioma 1",
+            "idioma2": "Idioma 2",
+            "idioma3": "Idioma 3",
+            "idioma4": "Idioma 4",
+            "idioma5": "Idioma 5",
+            "activo": "Activo"
+        }
+    }
+}
